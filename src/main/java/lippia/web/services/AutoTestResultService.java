@@ -3,21 +3,27 @@ package lippia.web.services;
 import com.crowdar.core.actions.ActionManager;
 import lippia.web.constants.AutoTestConstants;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+import java.util.List;
 
 
 public class AutoTestResultService extends ActionManager {
 
-    private static WebElement stats() {
-        return getElement(AutoTestConstants.FIRST_ARRIVAL_XPATH,
-                AutoTestConstants.SECOND_ARRIVAL_XPATH,AutoTestConstants.THIRD_ARRIVAL_XPATH);
+    private static List<WebElement> stats() {
+        return getElements(AutoTestConstants.ARRIVAL_XPATH);
     }
-
-    public static String getStats() {
-        return stats().getText();
+    public static void verifyArrivalVisibility(){
+        ActionManager.waitVisibility(AutoTestConstants.NEW_ARRIVAL_XPATH);
+        for (WebElement e: stats()) {
+            e.isDisplayed();
+        };
     }
-
-    public static void verifyResults(){
-        Assert.assertTrue(getStats().isEmpty());
+    private static List<WebElement> statsSec() {
+        return getElements(AutoTestConstants.SLIDER_XPATH);
+    }
+    public static void verifySliderVisibility(){
+        ActionManager.waitVisibility(AutoTestConstants.NEW_ARRIVAL_XPATH);
+        for (WebElement e: statsSec()) {
+            e.isDisplayed();
+        };
     }
 }

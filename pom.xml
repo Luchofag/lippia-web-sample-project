@@ -20,10 +20,10 @@
 		<runner>testngSecuencial.xml</runner>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<!-- defult configuration chrome local -->
-		<crowdar.projectType></crowdar.projectType>
-		<crowdar.driver.capabilities.json_path></crowdar.driver.capabilities.json_path>
-		<crowdar.setupStrategy></crowdar.setupStrategy>
+		<!-- default configuration chrome local -->
+		<crowdar.projectType>WEB_CHROME</crowdar.projectType>
+		<crowdar.driver.capabilities.json_path>src/main/resources/browsers/chromeCapabilities.json</crowdar.driver.capabilities.json_path>
+		<crowdar.setupStrategy>web.DownloadLatestStrategy</crowdar.setupStrategy>
 		<crowdar.driverHub></crowdar.driverHub>
 
 		<!-- cucumber options -->
@@ -34,7 +34,9 @@
 		<crowdar.cucumber.option>src/test/resources/web/features ${cucumber.hooks} ${cucumber.stepsDefinitions} --tags 'not @Ignore' ${cucumber.tags} ${cucumber.reporters}</crowdar.cucumber.option>
 
 		<!-- client project custom properties -->
+
 		<web-app.url>https://practice.automationtesting.in/</web-app.url>
+
 
 	</properties>
 	<profiles>
