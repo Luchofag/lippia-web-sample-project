@@ -8,9 +8,8 @@ Feature: As a user of AutomationTesting.in i need to test the login page
     Then Registration must fail with a warning message 'please provide valid email address'
     Examples:
     |password   |
-    |nasfl12341 |
-    |1234qweiou |
-    |qwerty12345|
+    |192837192837912873!!!askjhdakjshd|
+    |!!!askjhdakjshd192837192837912873|
 
 
   @Register2 @Smoke

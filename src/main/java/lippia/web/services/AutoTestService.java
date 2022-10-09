@@ -44,6 +44,10 @@ public class AutoTestService extends ActionManager {
     public static void clickRegisterButton() {
         click(AutoTestConstants.REG_BUTTON_XPATH);
     }
+    public static void clickMailBox() {
+        click(AutoTestConstants.REG_MAIL_INPUT_XPATH);
+    }
+
 
 
     public static void clickShopButton() {
