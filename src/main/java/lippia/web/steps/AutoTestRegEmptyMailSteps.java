@@ -11,7 +11,7 @@ import lippia.web.services.AutoTestService;
 
 public class AutoTestRegEmptyMailSteps extends PageSteps {
 
-    @Given("^The user is in AutomationTesting.in Page$")
+    @Given("^User is in Automation Testing Practice Site$")
     public void homeEmptyMail(){
         AutoTestService.navigateTo();
     }

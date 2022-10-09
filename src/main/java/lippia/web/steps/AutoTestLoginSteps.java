@@ -11,7 +11,7 @@ import lippia.web.services.AutoTestService;
 
 public class AutoTestLoginSteps extends PageSteps {
 
-    @Given("^The user is in AutomationTesting.in Page$")
+    @Given("^The user is in Automation Testing Practice Page$")
     public void homeLog(){
         AutoTestService.navigateTo();
     }

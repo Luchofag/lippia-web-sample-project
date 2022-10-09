@@ -21,9 +21,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- default configuration chrome local -->
-		<crowdar.projectType>WEB_CHROME</crowdar.projectType>
-		<crowdar.driver.capabilities.json_path>src/main/resources/browsers/chromeCapabilities.json</crowdar.driver.capabilities.json_path>
-		<crowdar.setupStrategy>web.DownloadLatestStrategy</crowdar.setupStrategy>
+		<crowdar.projectType></crowdar.projectType>
+		<crowdar.driver.capabilities.json_path></crowdar.driver.capabilities.json_path>
+		<crowdar.setupStrategy></crowdar.setupStrategy>
 		<crowdar.driverHub></crowdar.driverHub>
 
 		<!-- cucumber options -->

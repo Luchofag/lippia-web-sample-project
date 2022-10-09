@@ -10,7 +10,7 @@ import lippia.web.services.AutoTestService;
 
 public class AutoTestRegEmptyPassSteps extends PageSteps {
 
-    @Given("^The user is in AutomationTesting.in Page$")
+    @Given("^The user is in AutomationTesting.in Site$")
     public void homeEmptyPass(){
         AutoTestService.navigateTo();
     }

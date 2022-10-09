@@ -10,7 +10,7 @@ import lippia.web.services.AutoTestService;
 
 public class AutoTestSlidersSteps extends PageSteps {
 
-    @Given("^The user is in AutomationTesting.in Page$")
+    @Given("^User is in AutomationTesting.in Page$")
     public void homeSlider(){
         AutoTestService.navigateTo();
     }
