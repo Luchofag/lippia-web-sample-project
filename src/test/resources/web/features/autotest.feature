@@ -25,7 +25,6 @@ Feature: As a user of AutomationTesting.in i need to test some test cases
       |asdasd123|123asdasd  |
       |juancito |oticnauj   |
       |dasdasr  |dassda2asrf|
-      |ososopep |asdasdwqe  |
 
   @Login2 @Smoke
   Scenario Outline: Login with valid username and empty password
@@ -38,7 +37,7 @@ Feature: As a user of AutomationTesting.in i need to test some test cases
       |usuario1@mail.com|
       |usuario2@mail.com|
       |usuario3@mail.com|
-      |usuario4@mail.com|
+
 
   @Register @Smoke
   Scenario Outline: Register with empty email-address text box
@@ -51,7 +50,7 @@ Feature: As a user of AutomationTesting.in i need to test some test cases
     |nasfl12341 |
     |1234qweiou |
     |qwerty12345|
-    |12345qwerty|
+
 
   @Register2 @Smoke
   Scenario Outline: Register with empty password text box
@@ -64,4 +63,3 @@ Feature: As a user of AutomationTesting.in i need to test some test cases
     |usuario1@mail.com|
     |usuario2@mail.com|
     |usuario3@mail.com|
-    |usuario4@mail.com|

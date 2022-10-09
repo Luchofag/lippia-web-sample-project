@@ -21,7 +21,7 @@ public class AutoTestRegEmptyPassSteps extends PageSteps {
     @And("^Enter valid (.*) in Email-Address textbox, enter empty password in password textbox and click on Register button$")
     public void logTextsBoxesEmptyPass(String regEmail){
         AutoTestService.enterMailTBox(regEmail);
-        AutoTestService.clickLoginButton();
+        AutoTestService.clickRegisterButton();
     }
     @Then("Registration must fail with a warning message 'please enter an account password'")
     public void emptyPassVerification() {

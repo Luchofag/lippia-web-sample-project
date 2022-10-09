@@ -22,7 +22,7 @@ public class AutoTestRegEmptyMailSteps extends PageSteps {
     @And("^Enter empty Email Address in Email-Address textbox, and enter a valid (.*) in password textbox, and click on Register button$")
     public void logTextsBoxesEmptyMail(String regPassword){
         AutoTestService.enterRegPassTBox(regPassword);
-        AutoTestService.clickLoginButton();
+        AutoTestService.clickRegisterButton();
     }
     @Then("Registration must fail with a warning message 'please provide valid email address'")
     public void emptyMailVerification() {
