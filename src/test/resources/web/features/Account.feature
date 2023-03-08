@@ -1,4 +1,4 @@
-@Smoke
+@Account
 Feature: Como usuario de AutomationTesting.in necesito entrar a la pagina de 'My Account'
 
   Scenario Outline: Detalles de la cuenta

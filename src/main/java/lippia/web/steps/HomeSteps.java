@@ -5,6 +5,8 @@ import io.cucumber.java.en.*;
 import lippia.web.services.AutoTestService;
 import lippia.web.services.VerificationService;
 
+import static lippia.web.services.AutoTestService.closeAds;
+
 public class HomeSteps extends PageSteps {
 
     @Given("El usuario esta en la Home Page")
@@ -21,18 +23,18 @@ public class HomeSteps extends PageSteps {
         AutoTestService.clickHomeButton();
     }
 
-    @When("el usuario puede ver solo tres 'arrivals'")
+    @Then("el usuario puede ver solo tres 'arrivals'")
     public void arrivalVerification() {
         VerificationService.verifyArrivalVisibility();
     }
 
-    @Given("el usuario hace click en la imagen del primer 'arrival'")
+    @When("el usuario hace click en la imagen del primer 'arrival'")
     public void clickInArrival(){
         AutoTestService.navigateTo();
         AutoTestService.clickInArrival();
     }
 
-    @When("ingrese en la pagina del libro, hace click en Add to basket para agregarlo al carro")
+    @And("ingrese en la pagina del libro, hace click en Add to basket para agregarlo al carro")
     public void addToBasket() {
         AutoTestService.addToBasketBtn();
     }
@@ -65,6 +67,7 @@ public class HomeSteps extends PageSteps {
         AutoTestService.fillCity(city);
         AutoTestService.fillCounty(county);
         AutoTestService.fillPostcode(postcode);
+        closeAds();
     }
 
     @Then("el usuario puede ver los detalles del pedido")
@@ -73,7 +76,9 @@ public class HomeSteps extends PageSteps {
     }
 
     @When("hace click en place order, para realizar el pedido")
-    public void clickPlaceOrder() {
+    public void clickPlaceOrder() throws InterruptedException {
+        closeAds();
         AutoTestService.clickPlaceOrder();
+
     }
 }

@@ -1,4 +1,4 @@
-@Smoke
+@Sign
 Feature: Como usuario de AutomationTesting.in necesito probar las funcionalidades de la pagina de registro de cuentas
 
   Scenario Outline: Registro sin password

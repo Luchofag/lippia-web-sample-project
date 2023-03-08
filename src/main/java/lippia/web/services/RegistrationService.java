@@ -7,10 +7,10 @@ public class RegistrationService extends ActionManager {
 
     //REGISTRATION
     public static void enterMailTBox(String text) {
-        setInput(RegistrationConstants.REG_MAIL_INPUT_XPATH, text);
+        setInput(RegistrationConstants.SIGN_MAIL_INPUT, text);
     }
     public static void clickRegisterButton() {
-        click(RegistrationConstants.REG_BUTTON_XPATH);
+        click(RegistrationConstants.SIGN_BUTTON);
         AutoTestService.closeAds();
     }
 }

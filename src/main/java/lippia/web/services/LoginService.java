@@ -9,24 +9,24 @@ public class LoginService extends ActionManager {
 
     //LOGIN
     public static void clickMyAccountButton() {
-        click(AccountConstants.ACCOUNT_BUTTON_XPATH);
+        click(AccountConstants.ACCOUNT_BUTTON);
     }
     public static void enterUserTBox(String text) {
-        setInput(LoginConstants.USERNAME_INPUT_XPATH, text);
+        setInput(LoginConstants.USERNAME_INPUT, text);
     }
     public static void clickAccountDetails() {
-        click(AccountConstants.ACCOUNT_DETAILS_BTN_XPATH);
+        click(AccountConstants.ACCOUNT_DETAILS_BTN);
     }
     public static void clickLogOutBtn(){
-        click(AccountConstants.LOGOUT_BTN_XPATH);
+        click(AccountConstants.LOGOUT_BTN);
     }
     public static void enterPassTBox(String text) {
-        setInput(LoginConstants.PASSWORD_INPUT_XPATH, text);
+        setInput(LoginConstants.PASSWORD_INPUT, text);
     }
     public static void clickLoginButton() {
-        click(LoginConstants.LOGIN_BUTTON_XPATH);
+        click(LoginConstants.LOGIN_BUTTON);
     }
     public static void clickSignOutBtn(){
-        click(LoginConstants.SIGN_OUT_BTN_XPATH);
+        click(LoginConstants.SIGN_OUT_BTN);
     }
 }

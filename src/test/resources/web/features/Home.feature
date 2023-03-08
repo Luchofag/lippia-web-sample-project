@@ -1,13 +1,16 @@
-@Smoke
+@Home
 Feature: Como usuario de AutomationTesting.in necesito probar las funcionalidades del home page
 
   Scenario: Home Page with three Arrivals only
     Given El usuario esta en la Home Page
     When el usuario hace click en el boton 'shop' del menu
     And regresa al home page, con el boton de 'home'
-    When el usuario puede ver solo tres 'arrivals'
-    Given el usuario hace click en la imagen del primer 'arrival'
-    When ingrese en la pagina del libro, hace click en Add to basket para agregarlo al carro
+    Then el usuario puede ver solo tres 'arrivals'
+
+  Scenario: Bills Details
+    Given El usuario esta en la Home Page
+    When el usuario hace click en la imagen del primer 'arrival'
+    And ingrese en la pagina del libro, hace click en Add to basket para agregarlo al carro
     And ingresa al Item menu, para ver el carro de compras
     When el usuario puede ver el importe total, procede haciendo click en el boton Proceed to chekout
     Then el usuario puede ver el detalle de facturacion e informacion adicional

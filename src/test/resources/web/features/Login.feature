@@ -1,4 +1,4 @@
-@Smoke
+@Login
 Feature: As a user of AutomationTesting.in i need to test the register page
 
 Scenario Outline: Login con usuario y password en mayuscula

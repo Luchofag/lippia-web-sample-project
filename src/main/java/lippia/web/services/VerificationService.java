@@ -4,6 +4,7 @@ import com.crowdar.core.actions.ActionManager;
 import com.sun.jna.WString;
 import lippia.web.constants.*;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -11,32 +12,32 @@ import java.util.List;
 public class VerificationService extends ActionManager {
     //-----------------------------------------------------HOME-----------------------------------------------------------
     private static List<WebElement> stats() {
-        return getElements(HomeConstants.ARRIVAL_XPATH);
+        return getElements(HomeConstants.ARRIVAL);
     }
     public static void verifyArrivalVisibility(){
-        ActionManager.waitVisibility(HomeConstants.NEW_ARRIVAL_XPATH);
+        ActionManager.waitVisibility(HomeConstants.NEW_ARRIVAL);
         for (WebElement e: stats()) {
             e.isDisplayed();
         };
     }
     private static List<WebElement> statsSec() {
-        return getElements(HomeConstants.SLIDER_XPATH);
+        return getElements(HomeConstants.HOME_SLIDER);
     }
     public static void verifySliderVisibility(){
-        ActionManager.waitVisibility(HomeConstants.NEW_ARRIVAL_XPATH);
+        ActionManager.waitVisibility(HomeConstants.NEW_ARRIVAL);
         for (WebElement e: statsSec()) {
             e.isDisplayed();
         };
     }
     private static WebElement visibleBillingDetails(){
-        return getElement(BillingConstants.BILLING_DETAIL_VALIDATE_TEXT_XPATH);
+        return getElement(BillingConstants.BILLING_DETAIL_VALIDATE_TEXT);
     }
 
     public static void verifyBillingDetailsVisibility(){
         visibleBillingDetails().isDisplayed();
     }
     private static WebElement visibleAditionalDetails(){
-        return getElement(BillingConstants.ADDITIONAL_DETAILS_VERIFICATION_TEXT_XPATH);
+        return getElement(BillingConstants.ADDITIONAL_DETAILS_VERIFICATION_TEXT);
     }
 
     public static void verifyAditionalDetailsVisibility(){
@@ -44,21 +45,22 @@ public class VerificationService extends ActionManager {
     }
 
     private static WebElement visibleOrderDetails(){
+        waitVisibility(ShopConstants.ORDER_DETAIL_VALIDATE_TEXT_XPATH);
         return getElement(ShopConstants.ORDER_DETAIL_VALIDATE_TEXT_XPATH);
     }
 
     public static void verifyOrderDetailsVisibility(){
-        visibleOrderDetails().isDisplayed();
+        Assert.assertTrue(visibleOrderDetails().isDisplayed());
     }
     //------------------------------------------------------LOGIN---------------------------------------------------------
     private static WebElement visibleLogUserError() {
-        return getElement(LoginConstants.ERROR_VALIDATE_TXT_XPATH);
+        return getElement(LoginConstants.ERROR_VALIDATE_TXT);
     }
     public static void verifyErrorUser(){
-        visibleLogUserError().isDisplayed();
+        Assert.assertTrue(visibleLogUserError().isDisplayed());
     }
     private static WebElement visiblePassChange(){
-        return getElement(AccountConstants.PASSWORD_CHANGE_VALIDATE_TEXT_XPATH);
+        return getElement(AccountConstants.PASSWORD_CHANGE_VALIDATE_TEXT);
     }
 
     public static void verifyPassChangeVisibility(){
@@ -66,26 +68,26 @@ public class VerificationService extends ActionManager {
     }
 
     private static WebElement visibleLoginPage(){
-        return getElement(AccountConstants.LOGIN_VALIDATE_TEXT_XPATH);
+        return getElement(AccountConstants.LOGIN_VALIDATE_TEXT);
     }
 
     public static void verifyLoginPage(){
-        visibleLoginPage().isDisplayed();
+        Assert.assertTrue(visibleLoginPage().isDisplayed());
     }
 
     //--------------------------------------------------REGISTRATION------------------------------------------------------
 
     private static WebElement visibleRegMailError() {
-        return getElement(RegistrationConstants.REG_VALIDATE_MAIL_TXT_XPATH);
+        return getElement(RegistrationConstants.SIGN_VALIDATE_MAIL_TXT);
     }
     private static WebElement visibleRegPassError() {
-        return getElement(RegistrationConstants.REG_VALIDATE_PASS_TXT_XPATH);
+        return getElement(RegistrationConstants.SIGN_VALIDATE_PASS_TXT);
     }
     public static void verifyMailError(){
-        visibleRegMailError().isDisplayed();
+        Assert.assertTrue(visibleRegMailError().isDisplayed());
     }
     public static void verifyPasswordError(){
-        visibleRegPassError().isDisplayed();
+        Assert.assertTrue(visibleRegPassError().isDisplayed());
     }
 
     //------------------------------------------------------SHOP----------------------------------------------------------
